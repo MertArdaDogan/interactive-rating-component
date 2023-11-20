@@ -5,7 +5,7 @@ var rating_container= document.querySelector(".rating-container");
 var thank_container = document.querySelector(".thank-container");
 let rate = null;
 
-// Sayıları (ratings) seçmek için 
+//  Bu kod, rating elementlerinin tıklanabilir olmasını ve tıklanan elementin checked class'ını almasını sağlar
 rating.forEach((rating) => {
     rating.addEventListener("click", (m) => {
         var active=document.querySelector('.checked');
@@ -18,6 +18,10 @@ rating.forEach((rating) => {
     })
 })
 
+//  if" ifadesi ile "rate" adında bir değişken kontrol edilir. Eğer "rate" değişkeni bir değere sahipse, "select" adında bir nesnenin içeriğini "rate" değişkeniyle günceller.
+//  "innerText" özelliği, bir nesnenin içeriğini değiştirmek için kullanılır. Bu durumda, "select" nesnesinin içeriği "rate" değişkeninin değeriyle değiştirilir
+//  ve none class'ını rating_container isimli elemana ekler görünmez hale getirir.
+//  none class'ını rating thank_container isimli elemana ekler görünür hale getirir.
 btn.addEventListener("click", () =>{
     if (rate) {
         select.innerText = rate;
